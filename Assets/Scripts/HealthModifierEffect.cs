@@ -8,7 +8,7 @@ public class HealthModifierEffect : StatModiferEffect
 {
     protected override ModifiableStat GetStat(ModifiableTarget target)
     {
-        var stats = target.GetComponent<CharacterStats>();
-        return stats.speed;
+        var stats = target.GetComponent<Health>();
+        return stats.maxHealth;
     }
 }
