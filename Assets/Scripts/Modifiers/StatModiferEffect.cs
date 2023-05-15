@@ -18,6 +18,6 @@
             stat.MultiplicativeModifer -= multiplicativeModifer;
         }
 
-        protected abstract ModifiableStat GetStat(ModifiableTarget ship);
+        protected abstract ModifiableStat GetStat(ModifiableTarget target);
     }
 }

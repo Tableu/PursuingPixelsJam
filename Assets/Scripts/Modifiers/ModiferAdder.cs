@@ -11,5 +11,12 @@ namespace Systems.Modifiers
         {
             Modifier.AttachNewModifer(Target);
         }
+        #if UNITY_EDITOR
+        [ContextMenu("AddModifer")]
+        public void AddModifer()
+        {
+            AddSelectedModifer();
+        }
+        #endif
     }
 }
