@@ -17,7 +17,6 @@ public class Health : ModifiableTarget
     
     private void Update()
     {
-        Debug.Log(CurrentHealth);
         if (_healthDirty)
         {
             _healthDirty = false;
