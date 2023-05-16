@@ -21,6 +21,4 @@ public class CharacterStats : ModifiableTarget
         health.Initialize(this);
         speed = new ModifiableStat(data.BaseSpeed);
     }
-    
-    
 }
