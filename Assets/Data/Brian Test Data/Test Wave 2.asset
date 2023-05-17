@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55222fb4e40b19248922d291e7cdee4f, type: 3}
   m_Name: Test Wave 2
   m_EditorClassIdentifier: 
-  id: 
+  id: test_wave_2
   parentList: {fileID: 0}
-  spawnData: []
+  spawnData:
+  - EnemyData: {fileID: 11400000, guid: eaf25805ea686694fabf23ffc31fef23, type: 2}
+    SpawnTime: 4
+    SpawnOffset: {x: 2, y: -5}
+  - EnemyData: {fileID: 11400000, guid: eaf25805ea686694fabf23ffc31fef23, type: 2}
+    SpawnTime: 4
+    SpawnOffset: {x: 0, y: -5}
+  - EnemyData: {fileID: 11400000, guid: eaf25805ea686694fabf23ffc31fef23, type: 2}
+    SpawnTime: 4
+    SpawnOffset: {x: -2, y: -5}
