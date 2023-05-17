@@ -1,24 +1,31 @@
-using System;
 using Systems.Modifiers;
 using UnityEngine;
 
 public class CharacterStats : ModifiableTarget
 {
     [SerializeField] private CharacterData characterData;
+    private bool _initialized = false;
     internal ModifiableStat speed;
     public CharacterData Data => characterData;
     public void Start()
     {
-        if (characterData != null)
+        if (!_initialized && characterData != null)
         {
-            Initialize(characterData);
+            Initialize();
         }
     }
 
     public void Initialize(CharacterData data)
     {
+        characterData = data;
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        _initialized = true;
         var health = gameObject.AddComponent<Health>();
         health.Initialize(this);
-        speed = new ModifiableStat(data.BaseSpeed);
+        speed = new ModifiableStat(characterData.BaseSpeed);
     }
 }
