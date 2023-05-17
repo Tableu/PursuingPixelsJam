@@ -10,6 +10,10 @@ public class CharacterData : UniqueId
     [SerializeField] private int baseHealth;
     [SerializeField] private int baseSpeed;
 
+    [Header("References")] 
+    [SerializeField] private GameObject prefab;
+
     public int BaseHealth => baseHealth;
     public int BaseSpeed => baseSpeed;
+    public GameObject Prefab => prefab;
 }

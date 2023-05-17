@@ -4,6 +4,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterStats))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rgbdy;
