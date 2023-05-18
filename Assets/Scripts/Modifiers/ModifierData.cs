@@ -7,6 +7,7 @@ namespace Systems.Modifiers
     public class ModifierData : ScriptableObject
     {
         public string ModiferName;
+        public string ModiferDescription;
         public List<IEffect> Effects;
         public ConditionRule Condition;
         public float Duration;

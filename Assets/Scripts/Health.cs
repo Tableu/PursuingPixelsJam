@@ -2,6 +2,7 @@ using System;
 using Systems.Modifiers;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterStats))]
 public class Health : ModifiableTarget
 {
     internal ModifiableStat maxHealth;
