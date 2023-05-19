@@ -6,6 +6,7 @@ public class CharacterStats : ModifiableTarget
     [SerializeField] private CharacterData characterData;
     private bool _initialized = false;
     internal ModifiableStat speed;
+    internal ModifiableStat attackSpeed;
     public CharacterData Data => characterData;
     public void Start()
     {
@@ -27,5 +28,6 @@ public class CharacterStats : ModifiableTarget
         var health = gameObject.AddComponent<Health>();
         health.Initialize(this);
         speed = new ModifiableStat(characterData.BaseSpeed);
+        attackSpeed = new ModifiableStat(characterData.BaseAttackSpeed);
     }
 }

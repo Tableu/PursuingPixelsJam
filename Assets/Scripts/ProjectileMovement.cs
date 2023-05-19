@@ -5,22 +5,17 @@ public class ProjectileMovement : MonoBehaviour
     public float speed = 1;
     private GameObject _player;
     
-    // Start is called before the first frame update
     void Start()
     {   
         _player = GameObject.FindWithTag("Player");
-        if(_player != null)
-        {   
-            Vector3 v3 = (_player.transform.position - transform.position).normalized;
-            Vector2 v2 = new Vector2(v3.x, v3.y);
-            GetComponent<Rigidbody2D>().velocity = v2 * speed;
+        if (_player == null)
+        {
+            Destroy(gameObject);
+            return;
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Vector2 direction = (_player.transform.position - transform.position).normalized;
+        GetComponent<Rigidbody2D>().velocity = direction * speed;
+        transform.LookAt(_player.transform.position);
+        transform.right = _player.transform.position - transform.position;
     }
 }

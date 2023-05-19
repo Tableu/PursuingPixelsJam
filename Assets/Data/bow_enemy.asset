@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211efd83078c69240a8ff6acef626015, type: 3}
+  m_Name: bow_enemy
+  m_EditorClassIdentifier: 
+  id: bow_enemy
+  parentList: {fileID: 0}
+  baseHealth: 10
+  baseSpeed: 3
+  baseAttackSpeed: 1
+  prefab: {fileID: 8539559528899514105, guid: a16ef93f4e21c184f886b52dd2a54cdc, type: 3}

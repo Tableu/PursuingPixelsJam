@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rgbdy;
-    [SerializeField] private SpriteRenderer spriteRenderer;
     private PlayerInputActions _playerInputActions;
     private Vector2 _direction;
     private CharacterStats _stats;
@@ -35,13 +34,16 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sign(velocity.y)*_stats.speed;
         }
 
-        if (_direction.x == 0)
+        if (_direction.x > 0)
         {
-            velocity.x = 0;
+            transform.rotation = Quaternion.Euler(0,0,0);
+        }else if (_direction.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0,180,0);
         }
         else
         {
-            spriteRenderer.flipX = _direction.x < 0;
+            velocity.x = 0;
         }
 
         if (_direction.y == 0)

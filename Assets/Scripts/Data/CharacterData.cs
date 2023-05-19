@@ -8,12 +8,14 @@ public class CharacterData : UniqueId
 {
     [Header("Stats")]
     [SerializeField] private int baseHealth;
-    [SerializeField] private int baseSpeed;
+    [SerializeField] private float baseSpeed;
+    [SerializeField] private float baseAttackSpeed;
 
     [Header("References")] 
     [SerializeField] private GameObject prefab;
 
     public int BaseHealth => baseHealth;
-    public int BaseSpeed => baseSpeed;
+    public float BaseSpeed => baseSpeed;
+    public float BaseAttackSpeed => baseAttackSpeed;
     public GameObject Prefab => prefab;
 }

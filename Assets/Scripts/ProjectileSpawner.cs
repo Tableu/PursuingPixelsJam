@@ -5,12 +5,14 @@ using UnityEngine;
 public class ProjectileSpawner : MonoBehaviour
 {
     public GameObject arrow;
-    [SerializeField] private float interval = 1f;
+    [SerializeField] private Transform spawnPos;
 
+    private CharacterStats _stats;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shoot", interval, interval);
+        _stats = GetComponent<CharacterStats>();
+        InvokeRepeating("Shoot", 1/_stats.attackSpeed, 1/_stats.attackSpeed);
     }
 
     // Update is called once per frame
@@ -21,6 +23,6 @@ public class ProjectileSpawner : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject g = Instantiate(arrow, transform.position, Quaternion.identity);
+        GameObject g = Instantiate(arrow, spawnPos.position, Quaternion.identity);
     }
 }

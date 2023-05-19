@@ -15,12 +15,12 @@ MonoBehaviour:
   id: test_wave_2
   parentList: {fileID: 0}
   spawnData:
-  - EnemyData: {fileID: 11400000, guid: eaf25805ea686694fabf23ffc31fef23, type: 2}
+  - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
     SpawnTime: 4
     SpawnOffset: {x: 2, y: -5}
-  - EnemyData: {fileID: 11400000, guid: eaf25805ea686694fabf23ffc31fef23, type: 2}
+  - EnemyData: {fileID: 11400000, guid: 7c8e1261a31eaeb4d838c3b575e27e92, type: 2}
     SpawnTime: 4
     SpawnOffset: {x: 0, y: -5}
-  - EnemyData: {fileID: 11400000, guid: eaf25805ea686694fabf23ffc31fef23, type: 2}
+  - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
     SpawnTime: 4
     SpawnOffset: {x: -2, y: -5}
