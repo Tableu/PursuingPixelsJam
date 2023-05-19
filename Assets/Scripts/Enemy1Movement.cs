@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy1Movement : MonoBehaviour
 {
     public float speed = 1;
-    private GameObject gameObject;
+    private GameObject _player;
     
     // Start is called before the first frame update
     void Start()
     {   
-        gameObject = GameObject.FindWithTag("Player");
-        if(gameObject != null)
+        _player = GameObject.FindWithTag("Player");
+        if(_player != null)
         {   
-            Vector3 v3 = (gameObject.transform.position - transform.position).normalized;
+            Vector3 v3 = (_player.transform.position - transform.position).normalized;
             Vector2 v2 = new Vector2(v3.x, v3.y);
             GetComponent<Rigidbody2D>().velocity = v2 * speed;
         }
@@ -23,9 +21,9 @@ public class Enemy1Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(gameObject != null)
+        if(_player != null)
         {
-            Vector3 v3 = (gameObject.transform.position - transform.position).normalized;
+            Vector3 v3 = (_player.transform.position - transform.position).normalized;
             Vector2 v2 = new Vector2(v3.x, v3.y);
             GetComponent<Rigidbody2D>().velocity = v2 * speed;
         }
