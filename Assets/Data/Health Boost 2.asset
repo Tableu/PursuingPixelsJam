@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c96afdcbcf3d4c68a60996a0d9ed0b04, type: 3}
-  m_Name: Health Boost
+  m_Name: Health Boost 2
   m_EditorClassIdentifier: 
-  ModiferName: Health Boost 1
-  ModiferDescription: 1
+  ModiferName: Health Boost 3
+  ModiferDescription: 3
   Effects:
   - {fileID: 11400000, guid: 259cd47aed2a747438e638fbf20cdf8e, type: 2}
   Condition: {fileID: 0}

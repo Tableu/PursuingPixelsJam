@@ -16,7 +16,7 @@ public class ModifierButton : MonoBehaviour
         button.onClick.AddListener(delegate
         {
             data.AttachNewModifer(GameObject.FindWithTag("Player").GetComponent<ModifiableTarget>());
-            Destroy(gameObject.transform.parent);
+            Destroy(gameObject.transform.parent.gameObject);
         });
     }
 }
