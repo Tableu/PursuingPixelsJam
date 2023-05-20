@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Systems.Modifiers;
 using UnityEngine;
@@ -27,7 +28,7 @@ public class ModifierManager : MonoBehaviour
         }
     }
 
-    public void OpenWindow()
+    public void OpenWindow(Action callback)
     {
         GameObject panel = Instantiate(modifierPanel, canvas.transform);
         ModifierStage stage = modifierStages.Modifiers[_modifierIndex];
@@ -37,14 +38,14 @@ public class ModifierManager : MonoBehaviour
         {
             var button = Instantiate(modifierButton, panel.transform);
             ModifierButton script = button.GetComponent<ModifierButton>();
-            script.Initialize(modifiers[i]);
+            script.Initialize(modifiers[i], callback);
         }
     }
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     [ContextMenu("Test Open Window")]
     public void TestOpenWindow()
     {
-        OpenWindow();
+        OpenWindow(null);
     }
     #endif
 }

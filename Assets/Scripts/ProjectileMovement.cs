@@ -13,7 +13,7 @@ public class ProjectileMovement : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        Vector2 direction = (_player.transform.position - transform.position).normalized;
+        Vector2 direction = ((Vector2)(_player.transform.position - transform.position)).normalized;
         GetComponent<Rigidbody2D>().velocity = direction * speed;
         transform.LookAt(_player.transform.position);
         transform.right = _player.transform.position - transform.position;

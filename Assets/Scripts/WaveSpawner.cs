@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,6 +9,29 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPos;
 
     private int _waveNumber = 0;
+    private int _spawnCount = 0;
+    private void Start()
+    {
+        SpawnWave();
+    }
+
+    private void FixedUpdate()
+    {
+        if (enemyParent.childCount == 0 && _waveNumber < levelData.WaveData.Count && levelData.WaveData[_waveNumber].SpawnData.Count == _spawnCount)
+        {
+            _waveNumber++;
+            if (_waveNumber < levelData.WaveData.Count)
+            {
+                ModifierManager.Instance.OpenWindow(SpawnWave);
+            }
+        }
+    }
+
+    public void Restart()
+    {
+        _waveNumber = 0;
+        SpawnWave();
+    }
 
     public void SpawnWave()
     {
@@ -16,6 +40,7 @@ public class WaveSpawner : MonoBehaviour
             Debug.Log("Error: Wave Index out of range");
             return;
         }
+        _spawnCount = 0;
         foreach (EnemySpawnData data in levelData.WaveData[_waveNumber].SpawnData)
         {
             if (data.SpawnTime <= 0)
@@ -27,11 +52,11 @@ public class WaveSpawner : MonoBehaviour
                 StartCoroutine(WaitAndSpawn(data.SpawnTime, data));
             }
         }
-        _waveNumber++;
     }
 
     private void SpawnEnemy(EnemySpawnData data)
     {
+        _spawnCount++;
         GameObject enemy = Instantiate(data.EnemyData.Prefab, (Vector2)spawnPos.position + data.SpawnOffset,Quaternion.identity,enemyParent);
         CharacterStats stats = enemy.GetComponent<CharacterStats>();
         if (stats == null)

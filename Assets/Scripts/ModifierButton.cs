@@ -1,3 +1,4 @@
+using System;
 using Systems.Modifiers;
 using TMPro;
 using UnityEngine;
@@ -9,13 +10,14 @@ public class ModifierButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Button button;
 
-    public void Initialize(ModifierData data)
+    public void Initialize(ModifierData data, Action callback)
     {
         titleText.text = data.ModiferName;
         descriptionText.text = data.ModiferDescription;
         button.onClick.AddListener(delegate
         {
             data.AttachNewModifer(GameObject.FindWithTag("Player").GetComponent<ModifiableTarget>());
+            callback?.Invoke();
             Destroy(gameObject.transform.parent.gameObject);
         });
     }
