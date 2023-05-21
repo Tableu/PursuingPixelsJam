@@ -12,21 +12,21 @@ public class RandomModifierData : ScriptableObject
 {
     [SerializeField] private List<RandomModifier> modifierList;
 
-    public List<ModifierData> GetRandomModifiers(int count)
+    public List<ModifierPair> GetRandomModifiers(int count)
     {
-        List<ModifierData> results = new List<ModifierData>();
+        List<ModifierPair> results = new List<ModifierPair>();
         List<RandomModifier> copy = modifierList.ToList();
         for (int i = 0; i < count; i++)
         {
-            ModifierData data = RandomModifier(copy);
+            ModifierPair data = RandomModifier(copy);
             results.Add(data);
-            copy.RemoveAll(modifier => modifier.Data == data);
+            copy.RemoveAll(modifier => modifier.Data.Equals(data));
         }
 
         return results;
     }
 
-    private ModifierData RandomModifier(List<RandomModifier> modifiers)
+    private ModifierPair RandomModifier(List<RandomModifier> modifiers)
     {
         List<int> intervals = new List<int>();
         int totalWeight = 0;
@@ -54,6 +54,24 @@ public class RandomModifierData : ScriptableObject
 [Serializable]
 public struct RandomModifier
 {
-    public ModifierData Data;
+    public ModifierPair Data;
     public int Weight;
+}
+
+[Serializable]
+public struct ModifierPair
+{
+    public ModifierData Player;
+    public ModifierData Enemy;
+
+    public override bool Equals(object obj)
+    {
+        if (!(obj is ModifierPair))
+        {
+            return false;
+        }
+
+        ModifierPair pair = (ModifierPair) obj;
+        return pair.Enemy == Enemy && pair.Player == Player;
+    }
 }

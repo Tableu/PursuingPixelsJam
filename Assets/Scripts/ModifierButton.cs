@@ -10,13 +10,14 @@ public class ModifierButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Button button;
 
-    public void Initialize(ModifierData data, Action callback)
+    public void Initialize(ModifierPair data, Action callback)
     {
-        titleText.text = data.ModiferName;
-        descriptionText.text = data.ModiferDescription;
+        titleText.text = data.Player.ModiferName;
+        descriptionText.text = data.Player.ModiferDescription;
         button.onClick.AddListener(delegate
         {
-            data.AttachNewModifer(GameObject.FindWithTag("Player").GetComponent<ModifiableTarget>());
+            data.Player.AttachNewModifer(GameObject.FindWithTag("Player").GetComponent<ModifiableTarget>());
+            ModifierManager.Instance.AddEnemyModifier(data.Enemy);
             callback?.Invoke();
             Destroy(gameObject.transform.parent.gameObject);
         });

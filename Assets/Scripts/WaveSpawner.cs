@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Systems.Modifiers;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -66,6 +67,10 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
         stats.Initialize(data.EnemyData);
+        foreach(ModifierData md in ModifierManager.Instance.EnemyModifiers)
+        {
+            md.AttachNewModifer(stats);
+        }
     }
 
     IEnumerator WaitAndSpawn(float duration, EnemySpawnData data)

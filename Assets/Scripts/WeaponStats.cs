@@ -1,4 +1,3 @@
-using System;
 using Systems.Modifiers;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ public class WeaponStats : MonoBehaviour
     internal ModifiableStat damage;
     internal ModifiableStat projectileSpeed;
 
-    private void Start()
+    private void Awake()
     {
         cooldown = new ModifiableStat(weaponData.BaseCooldown);
         damage = new ModifiableStat(weaponData.BaseDamage);

@@ -15,6 +15,9 @@ public class ModifierManager : MonoBehaviour
     [SerializeField] private GameObject canvas;
 
     private int _modifierIndex;
+    private List<ModifierData> enemyModifiers = new List<ModifierData>();
+
+    public List<ModifierData> EnemyModifiers => enemyModifiers;
 
     private void Awake()
     {
@@ -28,12 +31,17 @@ public class ModifierManager : MonoBehaviour
         }
     }
 
+    public void AddEnemyModifier(ModifierData data)
+    {
+        enemyModifiers.Add(data);
+    }
+
     public void OpenWindow(Action callback)
     {
         GameObject panel = Instantiate(modifierPanel, canvas.transform);
         ModifierStage stage = modifierStages.Modifiers[_modifierIndex];
         _modifierIndex++;
-        List<ModifierData> modifiers = stage.Data.GetRandomModifiers(stage.Count);
+        List<ModifierPair> modifiers = stage.Data.GetRandomModifiers(stage.Count);
         for (int i = 0; i < stage.Count; i++)
         {
             var button = Instantiate(modifierButton, panel.transform);
