@@ -7,6 +7,7 @@ public class CharacterStats : ModifiableTarget
     private bool _initialized = false;
     internal ModifiableStat speed;
     internal ModifiableStat attackSpeed;
+    internal ModifiableStat scale;
     public CharacterData Data => characterData;
     public void Start()
     {
@@ -29,5 +30,6 @@ public class CharacterStats : ModifiableTarget
         health.Initialize(this);
         speed = new ModifiableStat(characterData.BaseSpeed);
         attackSpeed = new ModifiableStat(characterData.BaseAttackSpeed);
+        scale = new ModifiableStat(1);
     }
 }

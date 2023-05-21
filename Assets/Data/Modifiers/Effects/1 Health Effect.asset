@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffd0e4bad63ee274f9ff81aa322218c7, type: 3}
-  m_Name: Damage Effect
+  m_Script: {fileID: 11500000, guid: 4c5d0239fa49a4b4e8a6c64259c43467, type: 3}
+  m_Name: 1 Health Effect
   m_EditorClassIdentifier: 
   additiveModifer: 0
-  multiplicativeModifer: 2
+  multiplicativeModifer: 0

@@ -14,12 +14,6 @@ public class ProjectileSpawner : MonoBehaviour
         InvokeRepeating("Shoot", 1/_stats.attackSpeed, 1/_stats.attackSpeed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        print(gameObject.name);
-    }
-
     private void Shoot()
     {
         GameObject g = Instantiate(arrow, spawnPos.position, Quaternion.identity);

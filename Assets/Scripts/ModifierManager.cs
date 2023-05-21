@@ -39,7 +39,10 @@ public class ModifierManager : MonoBehaviour
 
     public void AddEnemyModifier(ModifierData data)
     {
-        enemyModifiers.Add(data);
+        if (data != null)
+        {
+            enemyModifiers.Add(data);
+        }
     }
 
     public void OpenWindow(Action callback)

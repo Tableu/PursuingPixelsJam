@@ -36,6 +36,13 @@ public class Health : ModifiableTarget
         }
     }
 
+    public void Heal(float amount)
+    {
+        PercentHealth += amount / maxHealth;
+        PercentHealth = Mathf.Min(PercentHealth, 1);
+        _healthDirty = true;
+    }
+
     private void OnDestroy()
     {
         OnDestroyed?.Invoke();

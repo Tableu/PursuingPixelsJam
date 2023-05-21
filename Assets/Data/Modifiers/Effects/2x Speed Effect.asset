@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5d0239fa49a4b4e8a6c64259c43467, type: 3}
-  m_Name: Health Effect
+  m_Script: {fileID: 11500000, guid: bb77a8127ac682f479d5be4dc8c1c7f1, type: 3}
+  m_Name: 2x Speed Effect
   m_EditorClassIdentifier: 
-  additiveModifer: 10
-  multiplicativeModifer: 0
+  additiveModifer: 0
+  multiplicativeModifer: 2
