@@ -31,6 +31,12 @@ public class ModifierManager : MonoBehaviour
         }
     }
 
+    public void Restart()
+    {
+        _modifierIndex = 0;
+        enemyModifiers.Clear();
+    }
+
     public void AddEnemyModifier(ModifierData data)
     {
         enemyModifiers.Add(data);
@@ -38,6 +44,10 @@ public class ModifierManager : MonoBehaviour
 
     public void OpenWindow(Action callback)
     {
+        if (_modifierIndex > modifierStages.Modifiers.Count)
+        {
+            return;
+        }
         GameObject panel = Instantiate(modifierPanel, canvas.transform);
         ModifierStage stage = modifierStages.Modifiers[_modifierIndex];
         _modifierIndex++;

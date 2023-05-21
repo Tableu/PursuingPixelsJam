@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: ModifierData
   m_EditorClassIdentifier: 
   modifierList:
-  - Data: {fileID: 11400000, guid: 6e3afc78e1988574ca76d84b3407697c, type: 2}
+  - Data:
+      Player: {fileID: 11400000, guid: 6e3afc78e1988574ca76d84b3407697c, type: 2}
+      Enemy: {fileID: 11400000, guid: 6e3afc78e1988574ca76d84b3407697c, type: 2}
     Weight: 10
-  - Data: {fileID: 11400000, guid: 5a70a00cf6d77874aa98b0843dacad17, type: 2}
+  - Data:
+      Player: {fileID: 11400000, guid: 5a70a00cf6d77874aa98b0843dacad17, type: 2}
+      Enemy: {fileID: 11400000, guid: 5a70a00cf6d77874aa98b0843dacad17, type: 2}
     Weight: 10
-  - Data: {fileID: 11400000, guid: 6bc4ff5b0f246494b9690758ca54f228, type: 2}
+  - Data:
+      Player: {fileID: 11400000, guid: 6bc4ff5b0f246494b9690758ca54f228, type: 2}
+      Enemy: {fileID: 11400000, guid: 6bc4ff5b0f246494b9690758ca54f228, type: 2}
     Weight: 10

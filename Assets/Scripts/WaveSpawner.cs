@@ -1,19 +1,35 @@
-using System;
 using System.Collections;
 using Systems.Modifiers;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+    private static WaveSpawner _instance;
+
+    public static WaveSpawner Instance => _instance;
+    
     [SerializeField] private LevelData levelData;
     [SerializeField] private Transform enemyParent;
     [SerializeField] private Transform spawnPos;
+    [SerializeField] private GameObject playerPrefab;
 
     private int _waveNumber = 0;
     private int _spawnCount = 0;
     private void Start()
     {
         SpawnWave();
+    }
+    
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
     }
 
     private void FixedUpdate()
@@ -25,12 +41,23 @@ public class WaveSpawner : MonoBehaviour
             {
                 ModifierManager.Instance.OpenWindow(SpawnWave);
             }
+            else
+            {
+                GameObject player = GameObject.FindWithTag("Player");
+                Destroy(player);
+            }
         }
     }
 
     public void Restart()
     {
         _waveNumber = 0;
+        _spawnCount = 0;
+        foreach (Transform child in enemyParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        Instantiate(playerPrefab);
         SpawnWave();
     }
 

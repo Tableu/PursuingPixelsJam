@@ -32,11 +32,15 @@ public class Health : ModifiableTarget
         _healthDirty = true;
         if (CurrentHealth <= 0.01)
         {
-            OnDestroyed?.Invoke();
             Destroy(gameObject);
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        OnDestroyed?.Invoke();
+    }
+
     public event Action OnDestroyed;
     public event Action OnHealthChanged;
     
