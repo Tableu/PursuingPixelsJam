@@ -17,7 +17,7 @@ public class ProjectileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        print(gameObject.name);
     }
 
     private void Shoot()
