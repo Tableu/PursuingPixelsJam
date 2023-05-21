@@ -61,6 +61,8 @@ public struct RandomModifier
 [Serializable]
 public struct ModifierPair
 {
+    public string Title;
+    public string Description;
     public ModifierData Player;
     public ModifierData Enemy;
 

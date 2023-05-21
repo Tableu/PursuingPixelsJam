@@ -39,6 +39,7 @@ public class WaveSpawner : MonoBehaviour
             _waveNumber++;
             if (_waveNumber < levelData.WaveData.Count)
             {
+                _spawnCount = 0;
                 ModifierManager.Instance.OpenWindow(SpawnWave);
             }
             else
@@ -68,7 +69,7 @@ public class WaveSpawner : MonoBehaviour
             Debug.Log("Error: Wave Index out of range");
             return;
         }
-        _spawnCount = 0;
+        
         foreach (EnemySpawnData data in levelData.WaveData[_waveNumber].SpawnData)
         {
             if (data.SpawnTime <= 0)

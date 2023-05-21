@@ -15,3 +15,5 @@ MonoBehaviour:
   modifiers:
   - Data: {fileID: 11400000, guid: b243fa5a7a5c77f45a78bc1c556413d9, type: 2}
     Count: 3
+  - Data: {fileID: 11400000, guid: b243fa5a7a5c77f45a78bc1c556413d9, type: 2}
+    Count: 3

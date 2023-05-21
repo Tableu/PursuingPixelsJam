@@ -12,8 +12,8 @@ public class ModifierButton : MonoBehaviour
 
     public void Initialize(ModifierPair data, Action callback)
     {
-        titleText.text = data.Player.ModiferName;
-        descriptionText.text = data.Player.ModiferDescription;
+        titleText.text = data.Title;
+        descriptionText.text = data.Description;
         button.onClick.AddListener(delegate
         {
             data.Player.AttachNewModifer(GameObject.FindWithTag("Player").GetComponent<ModifiableTarget>());

@@ -4,7 +4,14 @@ public class PlayerDeath : MonoBehaviour
 {
     private void OnDestroy()
     {
-        ModifierManager.Instance.Restart();
-        WaveSpawner.Instance.Restart();
+        if (ModifierManager.Instance != null)
+        {
+            ModifierManager.Instance.Restart();
+        }
+
+        if (WaveSpawner.Instance != null)
+        {
+            WaveSpawner.Instance.Restart();
+        }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c891cf2a7d9d70040838eaf42f283e6a, type: 3}
   m_Name: Player Sword
   m_EditorClassIdentifier: 
-  id: 
+  id: sword
   parentList: {fileID: 0}
   baseCooldown: 5
   baseDamage: 10

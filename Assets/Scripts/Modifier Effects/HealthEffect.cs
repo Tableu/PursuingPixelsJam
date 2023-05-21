@@ -2,9 +2,9 @@ using System;
 using Systems.Modifiers;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Health Modifier", menuName = "Modifiers/Health", order = 0)]
+[CreateAssetMenu(fileName = "Health Effect", menuName = "Modifiers/Health", order = 0)]
 [Serializable]
-public class HealthModifierEffect : StatModiferEffect
+public class HealthEffect : StatModiferEffect
 {
     protected override ModifiableStat GetStat(ModifiableTarget target)
     {

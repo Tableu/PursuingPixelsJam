@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55222fb4e40b19248922d291e7cdee4f, type: 3}
-  m_Name: Test Wave
+  m_Name: Wave 2
   m_EditorClassIdentifier: 
-  id: test_wave
+  id: 
   parentList: {fileID: 0}
   spawnData:
-  - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
-    SpawnTime: 2
-    SpawnOffset: {x: 0, y: -3}
   - EnemyData: {fileID: 11400000, guid: 7c8e1261a31eaeb4d838c3b575e27e92, type: 2}
     SpawnTime: 0
-    SpawnOffset: {x: 0, y: 0}
+    SpawnOffset: {x: 0.5, y: 0}
+  - EnemyData: {fileID: 11400000, guid: 7c8e1261a31eaeb4d838c3b575e27e92, type: 2}
+    SpawnTime: 0
+    SpawnOffset: {x: -0.5, y: 0}
