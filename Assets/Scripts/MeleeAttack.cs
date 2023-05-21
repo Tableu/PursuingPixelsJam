@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
+    [SerializeField] private WeaponStats stats;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -9,7 +10,7 @@ public class MeleeAttack : MonoBehaviour
             Health health = other.gameObject.GetComponent<Health>();
             if (health != null)
             {
-                health.TakeDamage(10);
+                health.TakeDamage(stats.damage);
             }
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 1;
+    private float _speed = 1;
     private GameObject _player;
     void Start()
     {   
@@ -15,9 +15,14 @@ public class Projectile : MonoBehaviour
             return;
         }
         Vector2 direction = ((Vector2)(_player.transform.position - transform.position)).normalized;
-        GetComponent<Rigidbody2D>().velocity = direction * speed;
+        GetComponent<Rigidbody2D>().velocity = direction * _speed;
         transform.LookAt(_player.transform.position);
         transform.right = _player.transform.position - transform.position;
+    }
+
+    public void Initialize(float speed)
+    {
+        _speed = speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

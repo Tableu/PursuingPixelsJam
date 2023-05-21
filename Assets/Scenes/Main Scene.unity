@@ -1824,7 +1824,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2002521373
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -480067505, guid: 5d80a46540038e447b2a02f8d941544e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1910,7 +1910,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2002521373
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1325925937, guid: 5d80a46540038e447b2a02f8d941544e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1961,6 +1961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12c6f442419dc740b09f9466b03c11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 1649877369}
 --- !u!1 &1065847878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,6 +2376,7 @@ GameObject:
   - component: {fileID: 1649877366}
   - component: {fileID: 1649877367}
   - component: {fileID: 1649877368}
+  - component: {fileID: 1649877369}
   m_Layer: 8
   m_Name: Sword
   m_TagString: Untagged
@@ -2444,7 +2446,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5bd406ee37f93d4cbe69dc92dcc3be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 1649877369}
   animator: {fileID: 1649877366}
+--- !u!114 &1649877369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649877364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cadd3e98a484542939c96cdfeabcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 9d1552b291ba76c4780b3a454bfdb2e1, type: 2}
 --- !u!1 &1878541202
 GameObject:
   m_ObjectHideFlags: 0

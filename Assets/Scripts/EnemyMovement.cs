@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 1;
     private GameObject _player;
     private CharacterStats _stats;
     
@@ -14,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
         if(_player != null)
         {   
             Vector2 direction = (_player.transform.position - transform.position).normalized;
-            GetComponent<Rigidbody2D>().velocity = direction * speed;
+            GetComponent<Rigidbody2D>().velocity = direction * _stats.speed;
         }
         
     }

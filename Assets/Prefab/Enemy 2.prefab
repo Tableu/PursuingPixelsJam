@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8539559528899514109}
   - component: {fileID: 8539559528899514104}
   - component: {fileID: 3769489179340466042}
+  - component: {fileID: 151394296217010283}
   m_Layer: 7
   m_Name: Enemy 2
   m_TagString: Enemy
@@ -125,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c008ab409f04442bfd78a027823329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!114 &3769489179340466042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +140,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 8868922704182759602, guid: 4eff21d7b59ff4460bd291dd17b9ef36, type: 3}
   spawnPos: {fileID: 8539559529479199478}
+  weaponStats: {fileID: 151394296217010283}
+--- !u!114 &151394296217010283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539559528899514105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cadd3e98a484542939c96cdfeabcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: f38ffc933fab110449fc4cc8d22f2642, type: 2}
 --- !u!1 &8539559529185975431
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +225,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1582867179
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 68474310, guid: 1c8f0ae9b3ac79246a5fdef9531a853f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -327,7 +341,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1582867179
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1284370833, guid: 5d80a46540038e447b2a02f8d941544e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

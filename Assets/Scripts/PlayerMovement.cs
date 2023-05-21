@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterStats))]
 public class PlayerMovement : MonoBehaviour

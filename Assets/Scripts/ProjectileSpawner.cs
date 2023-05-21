@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
     public GameObject arrow;
     [SerializeField] private Transform spawnPos;
+    [SerializeField] private WeaponStats weaponStats;
 
     private CharacterStats _stats;
     // Start is called before the first frame update
@@ -24,5 +23,7 @@ public class ProjectileSpawner : MonoBehaviour
     private void Shoot()
     {
         GameObject g = Instantiate(arrow, spawnPos.position, Quaternion.identity);
+        var p = g.GetComponent<Projectile>();
+        p.Initialize(weaponStats.projectileSpeed);
     }
 }
