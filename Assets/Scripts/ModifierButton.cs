@@ -16,10 +16,18 @@ public class ModifierButton : MonoBehaviour
         descriptionText.text = data.Description;
         button.onClick.AddListener(delegate
         {
-            data.Player.AttachNewModifer(GameObject.FindWithTag("Player").GetComponent<ModifiableTarget>());
-            ModifierManager.Instance.AddEnemyModifier(data.Enemy);
-            callback?.Invoke();
-            Destroy(gameObject.transform.parent.gameObject);
+            GameObject player = GameObject.FindWithTag("Player");
+            if (player != null)
+            {
+                data.Player.AttachNewModifer(player.GetComponent<ModifiableTarget>());
+                ModifierManager.Instance.AddEnemyModifier(data.Enemy);
+                callback?.Invoke();
+                Destroy(gameObject.transform.parent.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject.transform.parent.gameObject);
+            }
         });
     }
 }

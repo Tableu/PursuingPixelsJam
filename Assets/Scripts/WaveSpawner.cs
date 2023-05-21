@@ -19,6 +19,9 @@ public class WaveSpawner : MonoBehaviour
 
     private int _waveNumber = 0;
     private int _spawnCount = 0;
+
+    public GameObject RestartButton => restartButton;
+    public GameObject WinText => winText;
     private void Start()
     {
         SpawnWave();

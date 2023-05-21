@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
-   [SerializeField] private GameObject quit;
-   void OnClick()
+    public void OnClick()
    {
         Application.Quit();
    }
