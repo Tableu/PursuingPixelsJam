@@ -1,6 +1,7 @@
 using System.Collections;
 using Systems.Modifiers;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private Transform enemyParent;
     [SerializeField] private Transform spawnPos;
     [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject winText;
+    [SerializeField] private GameObject quitButton;
+    [SerializeField] private GameObject restartButton;
 
     private int _waveNumber = 0;
     private int _spawnCount = 0;
@@ -45,6 +49,9 @@ public class WaveSpawner : MonoBehaviour
             {
                 GameObject player = GameObject.FindWithTag("Player");
                 Destroy(player);
+                winText.SetActive(true);
+                quitButton.SetActive(true);
+                restartButton.SetActive(true);
             }
         }
     }
@@ -68,6 +75,9 @@ public class WaveSpawner : MonoBehaviour
             Debug.Log("Error: Wave Index out of range");
             return;
         }
+        winText.SetActive(false);
+        quitButton.SetActive(false);
+        restartButton.SetActive(false);
         _spawnCount = 0;
         foreach (EnemySpawnData data in levelData.WaveData[_waveNumber].SpawnData)
         {

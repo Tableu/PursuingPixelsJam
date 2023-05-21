@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private float _speed = 1;
     private GameObject _player;
+    [SerializeField] private AudioSource arrow;
     void Start()
     {   
         _player = GameObject.FindWithTag("Player");
@@ -29,6 +30,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // arrowSound = gameObject.GetComponenet<AudioSource>.Play();
             Health health = collision.gameObject.GetComponent<Health>();
             if (health != null)
             {
