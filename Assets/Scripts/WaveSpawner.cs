@@ -43,6 +43,7 @@ public class WaveSpawner : MonoBehaviour
             _waveNumber++;
             if (_waveNumber < levelData.WaveData.Count)
             {
+                _spawnCount = 0;
                 ModifierManager.Instance.OpenWindow(SpawnWave);
             }
             else
