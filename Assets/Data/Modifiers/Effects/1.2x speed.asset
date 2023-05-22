@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 1.2x speed
   m_EditorClassIdentifier: 
   additiveModifer: 0
-  multiplicativeModifer: 0
+  multiplicativeModifer: 1.2

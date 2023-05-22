@@ -12,4 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7b2c2cbe95b34419c37ad76944188a, type: 3}
   m_Name: Stage 2
   m_EditorClassIdentifier: 
-  modifierList: []
+  modifierList:
+  - Data:
+      Title: Become Giant
+      Description: Player gets a size boost. Enemy gets health boost
+      Player: {fileID: 11400000, guid: 50768731345d10c4ab73893f5a132cc8, type: 2}
+      Enemy: {fileID: 11400000, guid: 6e3afc78e1988574ca76d84b3407697c, type: 2}
+    Weight: 10
+  - Data:
+      Title: Health Regen
+      Description: Gain health regen. Enemies deal more damage
+      Player: {fileID: 11400000, guid: 2e6959c716ffc2a44890a8d77505e5b7, type: 2}
+      Enemy: {fileID: 11400000, guid: 2200f96592094e94687192dc69a0d034, type: 2}
+    Weight: 10
+  - Data:
+      Title: Fragile Speed
+      Description: Go down to 1 health but get a speed boost.
+      Player: {fileID: 11400000, guid: ade384318545f6b449be8e98b425e1b1, type: 2}
+      Enemy: {fileID: 0}
+    Weight: 10

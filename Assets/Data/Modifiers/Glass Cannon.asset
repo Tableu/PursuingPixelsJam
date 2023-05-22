@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModiferName: 
   ModiferDescription: 
-  Effects: []
+  Effects:
+  - {fileID: 11400000, guid: eb1118e1958300b4faccfd4c19a7cba0, type: 2}
+  - {fileID: 11400000, guid: 50665342bf9603c44baf28fed99b535b, type: 2}
   Condition: {fileID: 0}
   Duration: 0
   HasDuration: 0

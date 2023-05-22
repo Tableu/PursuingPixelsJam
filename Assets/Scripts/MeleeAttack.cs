@@ -6,6 +6,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private WeaponStats stats;
     [SerializeField] private AudioSource sword;
     [SerializeField] private string enemyTag;
+    [SerializeField] private float knockback;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(enemyTag))
@@ -24,7 +25,7 @@ public class MeleeAttack : MonoBehaviour
             if (rb != null)
             {
                 Vector2 direction = (other.transform.position - transform.position).normalized;
-                rb.AddForce(direction*5, ForceMode2D.Impulse);
+                rb.AddForce(direction*knockback, ForceMode2D.Impulse);
             }
         }
     }

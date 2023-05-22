@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 1.5 Size
   m_EditorClassIdentifier: 
   additiveModifer: 0
-  multiplicativeModifer: 0
+  multiplicativeModifer: 1.5

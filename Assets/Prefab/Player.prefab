@@ -339,6 +339,7 @@ MonoBehaviour:
   stats: {fileID: 8892668795055291911}
   sword: {fileID: 465159795257088868}
   enemyTag: Enemy
+  knockback: 5
 --- !u!1 &4233223128061250760
 GameObject:
   m_ObjectHideFlags: 0

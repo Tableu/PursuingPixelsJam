@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221cf6c9454809a41bc4ef9daafe60f1, type: 3}
   m_Name: Regen Effect 1
   m_EditorClassIdentifier: 
-  tickPeriod: 0
-  BaseHeal: 0
+  tickPeriod: 1
+  BaseHeal: 1

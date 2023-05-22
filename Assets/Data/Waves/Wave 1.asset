@@ -17,7 +17,7 @@ MonoBehaviour:
   spawnData:
   - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
     SpawnTime: 0
-    SpawnOffset: {x: 0.5, y: 0}
+    SpawnOffset: {x: 1, y: 0}
   - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
     SpawnTime: 0
-    SpawnOffset: {x: -0.5, y: 0}
+    SpawnOffset: {x: -1, y: 0}
