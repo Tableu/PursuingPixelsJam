@@ -7,6 +7,7 @@ public class WeaponStats : MonoBehaviour
     internal ModifiableStat cooldown;
     internal ModifiableStat damage;
     internal ModifiableStat projectileSpeed;
+    public bool ReflectProjectiles = false;
 
     private void Awake()
     {

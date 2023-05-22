@@ -16,7 +16,10 @@ public class HealthBar : MonoBehaviour
         
         health.OnDestroyed += delegate
         {
-            Destroy(gameObject);
+            if (gameObject != null)
+            {
+                Destroy(gameObject);
+            }
         };
     }
 

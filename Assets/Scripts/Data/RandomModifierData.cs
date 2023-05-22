@@ -62,7 +62,8 @@ public struct RandomModifier
 public struct ModifierPair
 {
     public string Title;
-    public string Description;
+    public string PlayerDescription;
+    public string EnemyDescription;
     public ModifierData Player;
     public ModifierData Enemy;
 

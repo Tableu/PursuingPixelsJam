@@ -8,6 +8,9 @@ public class PlayerDeath : MonoBehaviour
     private void OnDestroy()
     {
         death.Play();
-        WaveSpawner.Instance.RestartButton.SetActive(true);
+        if (WaveSpawner.Instance != null && WaveSpawner.Instance.RestartButton != null)
+        {
+            WaveSpawner.Instance.RestartButton.SetActive(true);
+        }
     }
 }

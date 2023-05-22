@@ -7,13 +7,15 @@ using UnityEngine.UI;
 public class ModifierButton : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI titleText;
-    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private TextMeshProUGUI playerBuffText;
+    [SerializeField] private TextMeshProUGUI enemyBuffText;
     [SerializeField] private Button button;
 
     public void Initialize(ModifierPair data, Action callback)
     {
         titleText.text = data.Title;
-        descriptionText.text = data.Description;
+        playerBuffText.text = data.PlayerDescription;
+        enemyBuffText.text = data.EnemyDescription;
         button.onClick.AddListener(delegate
         {
             GameObject player = GameObject.FindWithTag("Player");

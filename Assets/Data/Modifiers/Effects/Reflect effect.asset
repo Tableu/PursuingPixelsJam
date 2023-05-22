@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211efd83078c69240a8ff6acef626015, type: 3}
-  m_Name: axe_enemy
+  m_Script: {fileID: 11500000, guid: ea1ec39b3c391c341a1d179dc756d6aa, type: 3}
+  m_Name: Reflect effect
   m_EditorClassIdentifier: 
-  id: axe_enemy
-  parentList: {fileID: 0}
-  baseHealth: 10
-  baseSpeed: 3
-  baseAttackSpeed: 1
-  prefab: {fileID: 2560357371272252174, guid: 6cfe4d91a2dff4f4f90a703fbe905584, type: 3}

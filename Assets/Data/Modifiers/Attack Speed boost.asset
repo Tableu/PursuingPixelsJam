@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c96afdcbcf3d4c68a60996a0d9ed0b04, type: 3}
-  m_Name: Size Boost
+  m_Name: Attack Speed boost
   m_EditorClassIdentifier: 
   ModiferName: 
   ModiferDescription: 
   Effects:
-  - {fileID: 11400000, guid: c9b5794e8b6ae604992a9477541879f8, type: 2}
-  - {fileID: 11400000, guid: c9b5794e8b6ae604992a9477541879f8, type: 2}
+  - {fileID: 11400000, guid: 03452489611d0c445938480b2b26dc0a, type: 2}
   Condition: {fileID: 0}
   Duration: 0
   HasDuration: 0

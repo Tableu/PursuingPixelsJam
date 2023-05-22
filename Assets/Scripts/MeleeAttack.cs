@@ -27,6 +27,13 @@ public class MeleeAttack : MonoBehaviour
                 Vector2 direction = (other.transform.position - transform.position).normalized;
                 rb.AddForce(direction*knockback, ForceMode2D.Impulse);
             }
+        }else if (other.CompareTag("Projectile"))
+        {
+            Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+            if (stats.ReflectProjectiles && rb != null)
+            {
+                rb.velocity *= -1;
+            }
         }
     }
 
