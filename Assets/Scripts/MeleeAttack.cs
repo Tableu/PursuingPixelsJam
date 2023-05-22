@@ -18,9 +18,11 @@ public class MeleeAttack : MonoBehaviour
                 health.TakeDamage(stats.damage);
             }
 
-            EnemyMovement enemyMovement = other.gameObject.GetComponent<EnemyMovement>();
-            PlayerMovement playerMovement = other.gameObject.GetComponent<PlayerMovement>();
-            StartCoroutine(HitStun(enemyMovement, playerMovement));
+            HitStun hitStun = other.gameObject.GetComponent<HitStun>();
+            if (hitStun != null)
+            {
+                hitStun.OnHit();
+            }
             Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
@@ -37,28 +39,5 @@ public class MeleeAttack : MonoBehaviour
         }
     }
 
-    private IEnumerator HitStun(EnemyMovement enemyMovement, PlayerMovement playerMovement)
-    {
-        if (enemyMovement != null)
-        {
-            enemyMovement.enabled = false;
-        }
-
-        if (playerMovement != null)
-        {
-            playerMovement.enabled = false;
-        }
-
-        yield return new WaitForSeconds(0.4f);
-        
-        if (enemyMovement != null)
-        {
-            enemyMovement.enabled = true;
-        }
-
-        if (playerMovement != null)
-        {
-            playerMovement.enabled = true;
-        }
-    }
+    
 }

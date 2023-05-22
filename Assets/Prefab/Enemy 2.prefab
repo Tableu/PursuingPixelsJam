@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 8539559528899514104}
   - component: {fileID: 3769489179340466042}
   - component: {fileID: 151394296217010283}
+  - component: {fileID: 2054273212723631840}
   m_Layer: 7
   m_Name: Enemy 2
   m_TagString: Enemy
@@ -278,6 +279,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: f38ffc933fab110449fc4cc8d22f2642, type: 2}
+  ReflectProjectiles: 0
+--- !u!114 &2054273212723631840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539559528899514105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4708a45c6d1b8554aa040d0475bb71a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyMovement: {fileID: 8539559528899514104}
+  PlayerMovement: {fileID: 0}
 --- !u!1 &8539559529479199479
 GameObject:
   m_ObjectHideFlags: 0

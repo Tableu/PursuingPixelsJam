@@ -79,6 +79,16 @@ public class WaveSpawner : MonoBehaviour
             Debug.Log("Error: Wave Index out of range");
             return;
         }
+
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            var health = player.GetComponent<Health>();
+            if (health != null)
+            {
+                health.Heal(10000);
+            }
+        }
         winText.SetActive(false);
         quitButton.SetActive(false);
         restartButton.SetActive(false);

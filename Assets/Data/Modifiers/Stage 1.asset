@@ -16,21 +16,28 @@ MonoBehaviour:
   - Data:
       Title: Double Health
       PlayerDescription: Player health is doubled
-      EnemyDescription: Enemies deal double damage
+      EnemyDescription: Player does less damage
       Player: {fileID: 11400000, guid: 6e3afc78e1988574ca76d84b3407697c, type: 2}
-      Enemy: {fileID: 11400000, guid: 2200f96592094e94687192dc69a0d034, type: 2}
+      Enemy: {fileID: 11400000, guid: 594b73a04c2780d49a3ab798e38b26ca, type: 2}
     Weight: 10
   - Data:
       Title: Damage Boost
       PlayerDescription: Gain double damage
-      EnemyDescription: Enemies move twice as fast
+      EnemyDescription: Enemies move faster
       Player: {fileID: 11400000, guid: 2200f96592094e94687192dc69a0d034, type: 2}
       Enemy: {fileID: 11400000, guid: 198d016c908df1742b5df5aa3230ef3e, type: 2}
     Weight: 10
   - Data:
       Title: Speed Boost
-      PlayerDescription: Move 1.2x faster
+      PlayerDescription: Move faster
       EnemyDescription: Enemy health is doubled
       Player: {fileID: 11400000, guid: 198d016c908df1742b5df5aa3230ef3e, type: 2}
       Enemy: {fileID: 11400000, guid: 6e3afc78e1988574ca76d84b3407697c, type: 2}
     Weight: 10
+  - Data:
+      Title: Regen for everyone!
+      PlayerDescription: Gain regen
+      EnemyDescription: Enemies also get regen
+      Player: {fileID: 11400000, guid: 2e6959c716ffc2a44890a8d77505e5b7, type: 2}
+      Enemy: {fileID: 11400000, guid: 2e6959c716ffc2a44890a8d77505e5b7, type: 2}
+    Weight: 5

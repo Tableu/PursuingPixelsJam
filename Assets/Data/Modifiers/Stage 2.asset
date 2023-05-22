@@ -37,7 +37,7 @@ MonoBehaviour:
   - Data:
       Title: Sword Reflect
       PlayerDescription: Sword attacks will reflect enemy projectiles
-      EnemyDescription: Enemyies fire faster
+      EnemyDescription: Enemies fire faster
       Player: {fileID: 11400000, guid: 78d512e86f5b2114ebbb23a0a8a9de3d, type: 2}
       Enemy: {fileID: 11400000, guid: 550541e73b543094c8642dcbf2acf598, type: 2}
     Weight: 10

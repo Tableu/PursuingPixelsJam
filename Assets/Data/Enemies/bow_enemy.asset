@@ -16,5 +16,5 @@ MonoBehaviour:
   parentList: {fileID: 0}
   baseHealth: 10
   baseSpeed: 2
-  baseAttackSpeed: 1.5
+  baseAttackSpeed: 1.2
   prefab: {fileID: 8539559528899514105, guid: a16ef93f4e21c184f886b52dd2a54cdc, type: 3}

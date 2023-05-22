@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: player
   parentList: {fileID: 0}
-  baseHealth: 20
+  baseHealth: 30
   baseSpeed: 5
+  baseAttackSpeed: 0
+  prefab: {fileID: 0}

@@ -15,9 +15,21 @@ MonoBehaviour:
   id: 
   parentList: {fileID: 0}
   spawnData:
+  - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
+    SpawnTime: 1
+    SpawnOffset: {x: 7, y: 0}
   - EnemyData: {fileID: 11400000, guid: 7c8e1261a31eaeb4d838c3b575e27e92, type: 2}
-    SpawnTime: 0
-    SpawnOffset: {x: 1, y: 0}
+    SpawnTime: 1
+    SpawnOffset: {x: -7, y: 0}
+  - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
+    SpawnTime: 2
+    SpawnOffset: {x: 7, y: 0}
+  - EnemyData: {fileID: 11400000, guid: 01b412fbaf2db8149852ea1501641f4e, type: 2}
+    SpawnTime: 3
+    SpawnOffset: {x: 7, y: 0}
   - EnemyData: {fileID: 11400000, guid: 7c8e1261a31eaeb4d838c3b575e27e92, type: 2}
-    SpawnTime: 0
-    SpawnOffset: {x: -1, y: 0}
+    SpawnTime: 5
+    SpawnOffset: {x: 0, y: 0}
+  - EnemyData: {fileID: 11400000, guid: 7c8e1261a31eaeb4d838c3b575e27e92, type: 2}
+    SpawnTime: 5
+    SpawnOffset: {x: -7, y: 0}

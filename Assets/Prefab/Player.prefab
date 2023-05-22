@@ -470,6 +470,7 @@ GameObject:
   - component: {fileID: 4233223129330943220}
   - component: {fileID: 8391523664981501040}
   - component: {fileID: 8892668795055291911}
+  - component: {fileID: 1934650095263272867}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -596,6 +597,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 9d1552b291ba76c4780b3a454bfdb2e1, type: 2}
+  ReflectProjectiles: 0
+--- !u!114 &1934650095263272867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4233223129330943218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4708a45c6d1b8554aa040d0475bb71a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyMovement: {fileID: 0}
+  PlayerMovement: {fileID: 4233223129330943222}
 --- !u!1 &5896283110432653958
 GameObject:
   m_ObjectHideFlags: 0

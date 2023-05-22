@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Regen Effect 1
   m_EditorClassIdentifier: 
   tickPeriod: 1
-  BaseHeal: 1
+  BaseHeal: 2
